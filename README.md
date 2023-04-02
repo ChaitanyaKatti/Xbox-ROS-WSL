@@ -1,6 +1,6 @@
 # Xbox-ROS-WSL
 
-A simple way to bypass the need to share USB devices like Xbox controller with Linux in WSL.
+A simple way to bypass the need to share USB devices like Xbox controller with Linux in WSL using [USBIP](https://learn.microsoft.com/en-us/windows/wsl/connect-usb)
 
 - `print_script.py` simply writes a single line text file with values of the current state of Xbox Controller. Run this script under Windows OS
 
