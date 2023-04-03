@@ -17,12 +17,12 @@ while not rospy.is_shutdown():
    
     with open(file_path, 'r') as f:  # Open the file and read the velocities from the first line
         line = f.readline()
-        vel_values = line.split()
-        #print("values are", vel_values)
-        if(len(vel_values) == 14): #Sometime the file becomes empty for a berif moment
-            throttle = (1 + float(vel_values[5]))/2      # Throttle-Left trigger
+        values = line.split()
+        #print("values are", values)
+        if(len(values) == 14): #Sometime the file becomes empty for a berif moment
+            throttle = (1 + float(values[5]))/2      # Throttle-Left trigger
             linear_vel = Max_linear_vel*throttle
-            angular_vel = -1*Max_angular_vel*float(vel_values[0]) # Turning rate-Right x axis
+            angular_vel = -1*Max_angular_vel*float(values[0]) # Turning rate-Right x axis
     
     #print(linear_vel, angular_vel, "\n")
     
